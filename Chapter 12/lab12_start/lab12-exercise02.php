@@ -6,15 +6,25 @@
 //$lows =  array(10,11,15,18,20,13,11);
 
 // version 2
+/*
 $highs = array("Monday" => 20,"Tuesday" => 30,"Wednesday" => 26,"Thursday" => 30,"Friday" => 30,"Saturday" => 29,"Sunday" => 25);
 $lows =  array("Monday" => 10,"Tuesday" => 11,"Wednesday" => 15,"Thursday" => 18,"Friday" => 20,"Saturday" => 13,"Sunday" => 11);
+ */
 
-
+// version 3 (2d array)
+$forecast = array("Monday" => array(20,10,"cloudy"),
+			"Tuesday" => array(30,11,"sunny"),
+			"Wednesday" => array(26,15,"sunny"),
+			"Thursday" => array(30,18,"cloudy"),
+			"Friday" => array(30,20,"rain"),
+			"Saturday" => array(29,13,"rain"),
+			"Sunday" => array(25,11,"cloudy")
+		);
 /*
  Outputs the relevant bootstrap markup to display the weather forcast 
  for a single day
 */
-function outputForecast($day,$high,$low){
+function outputForecast($day,$high,$low,$description){
    echo '<div class="panel panel-default col-lg-3 col-md-3 col-sm-6">';
    echo '<div class="panel-heading">';
    echo '<h3 class="panel-title">' . $day . '</h3>';
@@ -25,6 +35,7 @@ function outputForecast($day,$high,$low){
    echo '<tr><td>Low:</td><td>' . $low . '</td></tr>';
    echo '</table>';
    echo '</div>';
+   echo '<div class="panel panel-footer"><img src="'. $description .'.png" /> '. $description . '</div>';
    echo '</div>';
 }
 ?>
@@ -54,9 +65,15 @@ function outputForecast($day,$high,$low){
    */
    
    /* version 2 */
+/*
    foreach ($highs as $key => $todayHigh) {
       outputForecast($key, $todayHigh, $lows[$key]);
    }
+ */
+
+	foreach($forecast as $key => $weather) {
+		outputForecast($key, $weather[0], $weather[1], $weather[2]);
+	}
 ?>
 </div>
 </body>
