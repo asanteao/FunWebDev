@@ -1,0 +1,95 @@
+main {
+    margin: 30px 30px;
+}
+#commandLine {
+    margin: 0;
+    border: solid 1px #ccc; 
+    padding: 10px;
+    width: 635px; 
+    height: 40px;
+}
+#btnFade, #btnFadeIn, #btnFadeOut { 
+    float: left;
+    width: 90px;
+    height: 30px;
+}
+#btnSlide, #btnSlideUp, #btnSlideDown { 
+    float: right;
+    width: 90px;
+    height: 30px;
+}
+
+main figure {
+    margin: 0;
+    padding: 10px;
+    display: none;
+}
+
+#box {
+    background-color:  black;
+    opacity: 0.4;
+    width: 200px;
+    height: 150px;
+    position: absolute;
+    top: 95px;
+    left: 38px;
+}
+
+#progress {
+    border: 1pt solid black;
+    background-color:  white;
+    width: 655px;
+    height: 40px;
+    position: absolute;
+    top: 100px;
+    left: 38px;
+}
+
+#progressInside {
+    background-color:  red;
+    width: 1px;
+    height: 38px;
+    position: absolute;
+    top: 1;
+    left: 1;
+}
+
+#imgManipulated {
+    margin: 10px;
+    margin-left: 100px;
+}
+
+.sliders { width: 250px; }
+
+#sliderBox label {
+    display: block;
+    width: 250px; 
+    float: left;
+    
+}
+#sliderBox p {
+
+}
+#sliderBox {
+    margin: 0;
+    border: solid 1px #ccc; 
+    padding: 10px;
+    width: 300px;  
+    float: left;
+    margin-right: 10px;
+    background-color: white;
+    font-family: "Arial Narrow",Arial,'Gill Sans', 'Gill Sans MT', sans-serif;
+    font-size: 10pt;
+}
+
+.tiled {
+    background-image:url(../images/stripes.jpg);
+    background-repeat:repeat; 
+}
+
+/* temp tester 
+#imgManipulated img {
+   filter: opacity(62%) brightness(50%) contrast(50%);   
+-webkit-filter: opacity(62%) brightness(50%) contrast(50%);  
+}
+*/

@@ -1,0 +1,45 @@
+body {
+   font-size: 1.1em;
+}
+
+h1 { font-size: 1.5 em; }
+
+article {
+   background-color: #898989;
+   margin: 5px 100px;
+   padding: 5px 20px;
+}
+
+figure {    
+   border: 1pt solid #262626; 
+   background-color: #c1c1c1;
+   padding: 10px;
+   width: 200px;
+   margin: 10px;
+   position: relative;
+}
+
+figcaption {
+   width: 100px;
+   background-color: black;
+   color:white;
+   opacity: 0.6;
+   width: 140px;
+   height: 20px;
+   padding: 5px;
+   position: absolute;
+   top: 130px;
+   left: 10px;
+}
+
+.overlayed {
+   position: absolute;
+   top: 10px;
+   left: 10px;
+}
+
+
+
+
+
+

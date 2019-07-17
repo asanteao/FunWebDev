@@ -1,0 +1,21 @@
+body {
+  font-weight: bold;
+  color: red;
+}
+
+div {
+  font-weight: normal;
+  color: magenta;
+}
+p {
+  color: green;
+}
+
+.last {
+  color: blue;
+}
+
+#verylast {
+  color: orange;
+  font-size: 16pt;
+}

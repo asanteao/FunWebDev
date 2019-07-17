@@ -1,0 +1,104 @@
+body {
+    font-family:   Roboto, Arial, sans-serif;
+    font-size: 1em;
+    background-color: #ECEFF1;
+}
+header {
+   background-color: #37474f;
+   height: 80px;
+    padding: 15px 0 5px 25px;
+}
+header h1 {
+    font-size: 32px;
+    color: white;
+    float: left;
+}
+header h1 span {
+    color: #ff6e40;
+}
+
+header nav {
+    margin: 20px 15px 10px 10px;
+    float: right;
+}
+
+.centered {
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+figure {
+     margin: 0;
+    padding: 0;
+}
+
+.button {
+    padding: 0.5em;
+    background-color: #FF3D00;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    opacity: 0.3;
+    transition: opacity 2s ease-out;
+}
+
+.button:hover {
+	opacity: 1;
+	transition: opacity 2s ease-in;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 1em auto;
+}
+
+.cards {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+  }
+
+.card {
+	background: white;
+	margin-bottom: 2em;	
+    padding: 0;
+    width: 24%;
+	flex: 0 1 auto;
+}
+.card:hover {
+	box-shadow: 3px 3px 30px gray;
+	filter: saturate(230%);
+}
+
+.card a {
+	color: black;
+	text-decoration: none;
+}
+
+.card img {
+	width: 100%;
+}
+
+.card-content p {
+	padding: 0.5em 1.4em 0 1.4em;
+	font-size: 90%;    
+}
+
+.card-actions {
+	padding: 0.5em 1.4em;
+	font-size: 90%;       
+}
+
+@media only screen and (max-width: 580px) {
+	.card {
+		width: 100%;
+	}
+	header {
+		height: 80px;
+	}
+}
+@media only screen and (min-width: 581px) and (max-width: 868px) {
+	.card {
+		width: 49%;
+	}
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+   <meta charset="utf-8">
+   <title>Chapter 5</title>
+   <link rel="stylesheet" href="reset.css" />
+   <link rel="stylesheet" href="chapter05-project03.css" />
+</head>
+<body>
+<header>
+     <h1>Share Your Travels</h1>
+     <p>let us know where you've been</p>
+</header>
+<main>
+   <section>
+	   <form method="post" action="http://www.randyconnolly.com/tests/process.php">
+		   <fieldset>
+			   <legend>PHOTO DETAILS</legend>
+			   <table>
+				   <tr>
+					   <td colspan="2">
+						   <p id="title">Title<br/>
+						   <input type="text" name="title" placeholder="Give your photo descriptive name" /></p>
+					   </td>
+				   </tr>
+				   <tr>
+					   <td colspan="2">
+						   <p>Description<br/>
+						   <textarea rows="5" name="description" placeholder="Give your photo a descriptive name" ></textarea></p>
+					   </td>
+				   </tr>
+				   <tr>
+					   <td>
+						   <p>Continent<br/>
+						   <select name="continent">
+							   <option>North America</option>
+							   <option>Africa</option>
+							   <option>Europe</option>
+							   <option>South America</option>
+							   <option>Australia</option>
+							   <option>Asia</option>
+						   </select>
+						   </p>
+						   <p>Country<br/>
+						   <select name="continent">
+							   <option>United States</option>
+							   <option>Canada</option>
+							   <option>England</option>
+							   <option>Mexico</option>
+							   <option>Australia</option>
+							   <option>China</option>
+						   </select>
+						   </p>
+						   <p>City<br/>
+						   <input type="text" name="city"/>
+						   </p>
+					   </td>
+					   <td>
+						   <p id="copyright">Copyright?<br/>
+						   <input type="radio" name="copyright" value="1">All rights reserved</input><br/>
+						   <input type="radio" name="copyright" value="2">Creative Commons</input><br/></p>
+						   <p id="creativeCommonsTypes">Creative Commons Types<br/>
+						   <input type="checkbox" name="index[]" value="1">Attribution</input><br/>
+						   <input type="checkbox" name="index[]" value="2">Noncommercial</input><br/></p>
+						   <input type="checkbox" name="index[]" value="3">Noncommercial</input><br/></p>
+					   </td>
+				   </tr>
+				   <tr>
+					   <td colspan="2">
+						   <p id="acceptlicense">
+						   I accept the software license 
+						   <input type="checkbox" name="accept"/>
+						   </p>
+					   </td>
+				   </tr>
+				   <tr>
+					   <td>
+						   <p>
+						   Rate this photo:<br/>
+						   <input type="number" min="0" max="5" name="rate"/>
+						   </p>
+						   Color Collection<br/>
+						   <input type="color" name="color"/>
+					   </td>
+					   <td>
+						   <p>
+						  Date Taken:<br/>
+						  <input type="date" name="date"/><br/>
+						  Time Taken:<br/>
+						  <input type="time" name="time"/><br/>
+						   </p>
+					   </td>
+				   </tr>
+				   <tr>
+					   <td colspan="2"id="submit">
+						   <input type="submit" value="Submit"/>
+						   <input type="reset" value="Clear Form"/>
+					   </td>
+				   </tr>
+			   </table>
+		   </fieldset>
+	   </form>
+   </section>
+</main>  
+
+
+</body>
+</html>

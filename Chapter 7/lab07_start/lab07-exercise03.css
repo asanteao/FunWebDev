@@ -1,0 +1,17 @@
+figure {  
+   background-color: #EDEDDD;
+   border: 1pt solid #A8A8A8;
+   padding: 5px;
+   width: 150px;
+   top: 150px;
+   left: 200px;
+   position: absolute;
+}
+
+figcaption {
+   background-color: #EDEDDD;
+   padding: 5px;
+   top: 150px;
+   left: 200px;
+   position: absolute;
+}

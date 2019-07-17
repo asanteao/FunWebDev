@@ -1,0 +1,103 @@
+/*Overall page*/
+html {
+	padding-left: 3em;
+	padding-right: 3em;
+	padding-bottom: 3em;
+	background: #E8EAF6;
+}
+
+/*HEADER*/
+header {
+	background: #1A237E;
+}
+header h1 {
+	color: white;
+	padding-top: 1.0rem;
+	padding-left: 1.0rem;
+	padding-right: 1.0rem;
+	font: 2.5rem Helvetica, Arial, sans-serif;
+}
+header p {
+	color: white;
+	padding-bottom: 1.0rem;
+	padding-left: 1.0rem;
+	padding-right: 1.0rem;
+	font: italic 1rem Helvetica, Arial, sans-serif;
+}
+header nav ul li {
+	display: inline-block;
+	padding-left: 0.825rem;
+	padding-right: 0.825rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+}
+header nav ul li a {
+	padding-left: 0.825rem;
+	padding-right: 0.825rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+}
+header nav {
+	background: #3F51B5;
+}
+
+/*BODY/MAIN */
+main {
+}
+section>h3 {
+	padding: 1rem;
+	font: 1rem Helvetica, Arial, sans-serif;
+	background: #7986CB;
+	color: white;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+figcaption {
+	padding: 1rem;
+	background: #C5CAE9;
+	font-weight: bold;
+	color: gray;
+}
+figure+div {
+	padding: 1rem;
+}
+section {
+	border: 1px solid #C5CAE9;
+	margin: 1rem;
+}
+
+/*LINKS*/
+a:link {
+	font-weight: bold;
+	color: #00B0FF;
+}
+a:hover {
+	background: #F50057;
+	color: white;
+}
+
+/*REVIEWS*/
+.byline {
+	font: italic 0.90rem Helvetica, Arial, sans-serif;
+	margin: 1rem;
+	color: #7986CB;
+}
+time {
+	color: hotpink;
+}
+.byline+p {
+	margin:1rem;
+	border-bottom: 1px solid #C5CAE9;
+	padding-bottom: 0.5rem;
+}
+
+/*FOOTER*/
+footer {
+	background: #1A237E;
+	padding: 1rem;
+	color: white;
+}
+
+footer p {
+	padding-bottom: 0.4rem;
+}

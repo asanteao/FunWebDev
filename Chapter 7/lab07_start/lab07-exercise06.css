@@ -1,0 +1,29 @@
+body {
+   font-size: 1.1em;
+}
+
+h1 { font-size: 1.5 em; }
+
+p { margin: 16px 0; }
+
+article {
+   background-color: #898989;
+   margin: 5px 100px;
+   padding: 5px 20px;
+}
+
+figure {    
+   border: 1pt solid #262626; 
+   background-color: #c1c1c1;
+   padding: 5px;
+   width: 150px;
+   margin: 10px;
+   float: left;
+}
+
+
+
+
+
+
+

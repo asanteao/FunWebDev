@@ -1,0 +1,133 @@
+/*HEADER*/
+header #mainMenu {
+	text-align: right;
+	padding-left: 3.5rem;
+	padding-right: 3.5rem;
+	background: #263238;
+}
+header #mainMenu ul li {
+	list-style: none;
+	display: inline-block;
+	padding: 5px;
+}
+header h1 {
+	color: white;
+	font: bold 2.5rem Roboto,Helvetica, Arial, sans-serif;
+	background: url(../images/header-background.png) repeat;
+	padding-left: 3.5rem;
+	padding-right: 3.5rem;
+}
+header h1 span {
+	color: #FF3D00;
+}
+header #secondaryMenu {
+	background: #607D8B;
+	padding-left: 3.5rem;
+	padding-right: 3.5rem;
+}
+header #secondaryMenu ul li{
+	list-style: none;
+	display: inline-block;
+	padding: 5px;
+}
+header #mainMenu ul li a, header #secondaryMenu ul li a {
+	padding: 5px;
+}
+/*LINKS*/
+a {
+	color: #03A9F4;
+}
+a:hover {
+	color: white;
+	background: #FF3D00;
+}
+
+/*ARTICLE*/
+#mainContact div img {
+	border: 1px solid gray;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 5px;
+}
+#mainContact div h2 {
+	font: 1.5rem bold Helvetica, Arial, sans-serif;
+	text-align: center;
+}
+#mainContact section {
+	border: 1px gray solid;
+	margin-left: 3.5rem;
+	margin-right: 3.5rem;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font: 1rem Roboto,Helvetica,Arial,sans-serif;
+}
+#mainContact section p {
+	padding: 10px;
+}
+#mainContact section h3 {
+	background: url(../images/header-background.png) repeat;
+	padding: 10px;
+	color: white;
+}
+#mainContact section em {
+	color: gray;
+}
+article .actions ul{
+	background: #607D8B;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+article .actions ul li {
+	list-style: none;
+	display: inline-block;
+	background: #FF3D00;
+}
+
+.actionEdit {
+	padding-left: 15px;
+	padding-right: 15px;
+	background: url(../images/edit.png) no-repeat;
+	color: white;
+	text-decoration: none;
+	font: bold 0.825rem Roboto,Helvetica,Arial,sans-serif;
+}
+.actionFlag {
+	padding-left: 15px;
+	padding-right: 15px;
+	background: url(../images/flag.png) no-repeat;
+	color: white;
+	text-decoration: none;
+	font: bold 0.825rem Roboto,Helvetica,Arial,sans-serif;
+}
+a[href^="mailto"] {
+	background: url(../images/email.png) no-repeat 0 3px;
+	padding-left: 1em;
+}
+a[href^="tel"] {
+	background: url(../images/call.png) no-repeat 0 3px;
+	padding-left: 1em;
+}
+
+/*FOOTER*/
+footer {
+	padding-left: 3.5rem;
+	padding-right: 3.5rem;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	background: #263238;
+	color: white;
+	font: 1rem Roboto,Helvetica,Arial,sans-serif;
+}
+#copyright {
+	font-style: italic;
+	font-size: 0.825rem;
+}
+section figure img {
+	width: 100%;
+	max-width: 100%;
+}

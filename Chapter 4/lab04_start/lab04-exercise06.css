@@ -1,0 +1,45 @@
+header, footer {
+  color: white;
+  background-color: #213643;
+}
+nav {
+  background-color: #728B96;
+}
+
+h1, h2, h3 {
+ font-family: "Trebuchet MS", "Lucida Grande", Tahoma, sans-serif;
+}
+body {
+ font-family: Georgia, Cambria, "Times New Roman", serif;
+}
+
+#reviews {
+   border-bottom: solid 3pt #213643;
+   color: #ed8030;
+}
+.first {
+   color: #728B96;
+   font-style: italic;
+}
+a:link {
+	font-weight: bold;
+	color: #47B3D7;
+}
+a:visited {
+	color: #BB78FF;
+}
+a:hover {
+	background-color: #FFFF99;
+}
+nav ul li {
+	list-style: none; /*Remove bullets from the navigation <li> elements*/
+	display: inline; 
+	margin: 1em;
+	/*This adds space to the left and right of the <li> but not to the top and bottom. This is because for inline elements, top and bottom margin are ignored.*/
+}
+nav {
+	padding: 0.25em;
+}
+nav a {
+	padding: 0.25em;
+}

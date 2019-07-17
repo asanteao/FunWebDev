@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <title>Chapter 5</title>
+   <link rel="stylesheet" href="reset.css" />
+   
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">       
+   <link rel="stylesheet" href="chapter05-project01.css" />
+</head>
+<body>
+
+    <section>
+         <h3>Data</h3>
+	 <table>
+		 <caption>Orders</caption>
+		 <tr>
+			 <th>Id</th>
+			 <th>Date</th>
+			 <th>Customer</th>
+			 <th>Country</th>
+			 <th>Progress</th>
+			 <th>Status</th>
+		 </tr>
+		 <tr>
+			 <td>123</td>
+			 <td>Sep 12, 2017</td>
+			 <td>Jean Rousseau</td>
+			 <td>France</td>
+			 <td><progress max="100" value="100"/></td>
+			 <td><span class="status status-shipped">Shipped</span></td>
+		 </tr>
+		 <tr>
+			 <td>144</td>
+			 <td>Sep 20, 2017</td>
+			 <td>Georg Hegel</td>
+			 <td>Germany</td>
+			 <td><progress max="100" value="100"/></td>
+			 <td><span class="status status-shipped">Shipped</span></td>
+		 </tr>
+		 <tr>
+			 <td>149</td>
+			 <td>Oct 3, 2017</td>
+			 <td>John Locke</td>
+			 <td>England</td>
+			 <td><progress max="100" value="55"/></td>
+			 <td><span class="status status-processing">Processing</span></td>
+		 </tr>
+		 <tr>
+			 <td>162</td>
+			 <td>Oct 8, 2017</td>
+			 <td>Thomas Hobbes</td>
+			 <td>England</td>
+			 <td><progress max="100"  value="25"/></td>
+			 <td><span class="status status-pending">Pending</span></td>
+		 </tr>
+		 <tr>
+			 <td>177</td>
+			 <td>Oct 17, 2017</td>
+			 <td>Johann Fichte</td>
+			 <td>Germany</td>
+			 <td><progress max="100"  value="25"/></td>
+			 <td><span class="status status-pending">Pending</span></td>
+		 </tr>
+	 </table>
+    </section>
+    
+    <section>
+         <h3>Revise</h3>
+	 <form method="post" action="http://www.randyconnolly.com/tests/process.php">
+		 <fieldset>
+			 	<legend>Filters Orders</legend>
+				<label>Customer</label><br/>
+				<input type="text" name="name"/><br/>
+				<label>Country</label><br/>
+				<select name="country">
+					<option>Choose a Country</option>
+					<option>Ghana</option>
+					<option>United States</option>
+					<option>Other</option>
+				</select><br/>
+				<label>Status</label><br/>
+				<input type="radio" name="status" value="pending">Pending</input>
+				<input type="radio" name="status" value="proc">Processing</input>
+				<input type="radio" name="status" value="shipped">Shipped</input><br/>
+				<label>Order Date</label><br/>
+				<input type="date" name="orderDate"/><br/>
+				<input type="submit" formtarget="_blank"/><br/>
+		 </fieldset>
+	 </form>
+    </section>    
+
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Merriweather);
+
+
+/* general text formatting */
+
+h1, h2, h3, legend {
+ font-family: 'Merriweather', serif;    }
+body {
+   font-family: 'Open Sans', Arial, sans-serif;
+   font-size: 16px;
+}
+
+table {  
+   width: 90%;
+   margin: 0 auto;
+}
+table tbody td{
+   vertical-align: top;
+}
+
+legend {
+   background-color: #616161 ;
+    color: white;
+   margin: 0 auto;
+   width: 90%;
+   padding: 0.25em;
+   text-align: center;
+   font-weight: bold;
+   font-size: 24px;
+}
+fieldset {
+   margin: 1em auto;
+   background-color: #F5F5F5;
+   width: 70%;
+}
+form p {
+   margin-top: 0.5em;
+}
+form input[type="text"], form select {
+    font-size: 16px;
+    height: 24px;
+    padding: 3px;
+}
+form select {
+    height: 30px;
+}
+#title, #description { width: 100% }
+#medium, #museum { width: 90% }
+#year { width: 40%; }
+
+
+.box {
+   border: 1pt solid #9E9E9E;
+   padding: 0.5em;
+   margin-bottom: 0.4em;
+}
+
+.rectangle {
+   background-color: #BDBDBD;
+   padding: 0.5em;
+    margin-bottom: 5px;
+}
+.centered {
+   text-align: center;
+}
+.highlight {
+    background-color: #FFE0B2;
+}    
+.error {
+    background: #FFCDD2 url(error.png) no-repeat 98% center;
+    box-shadow: 0 0 5px #FF5252;
+    border-color: #FF1744;    
+}
+
+
+
+.btn {
+  -webkit-border-radius: 3;
+  -moz-border-radius: 3;
+  border-radius: 3px;
+  height: 32px;
+  color: black;
+  font-size: 14px;
+  background: #FF9100;
+  padding: 5px 20px 5px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #FFAB40;
+  text-decoration: none;
+}
+

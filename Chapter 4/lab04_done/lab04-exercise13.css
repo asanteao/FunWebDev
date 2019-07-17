@@ -1,0 +1,43 @@
+header, footer, nav, article, section, figure, figcaption, h1, h2, h3, ul, li, body, div, p, img
+{
+   margin: 0;
+   padding: 0;
+   font-size: 100%;
+   vertical-align: baseline;
+   border: 0;
+}
+
+h1, h2, h3 {
+ font-family: Georgia, Cambria, "Times New Roman", cursive;
+}
+h1 { 
+   font-size: 250%; 
+   text-transform: uppercase;
+   letter-spacing: 10px;
+text-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+} 
+
+body {
+ font-family: Helvetica, Arial, sans-serif;
+}
+
+div { 
+   margin: 2em; 
+   padding: 1em;
+   background-color: #FDFCDC;
+}
+
+p {
+   margin-bottom: 0.5em;
+}
+p#first {
+   text-align: right;
+}
+p#second {
+   text-indent: 2em;
+   line-height: 1.5em;
+}
+
+
+
+

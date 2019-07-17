@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Project 3</title>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">  
+    <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.blue_grey-deep_orange.min.css" />
+    <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+    
+    <link rel="stylesheet" href="css/styles.css">  
+	    <script src="js/functions.js"></script>
+    <script src="js/data.js"></script>      
+</head>
+<body>
+
+<div class="mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--blue-grey-50">
+          
+    <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--blue-grey-800 mdl-color-text--white">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title"><strong>CRM</strong> Admin</span>
+          <div class="mdl-layout-spacer"></div>
+          <div class="material-icons mdl-badge mdl-badge--overlap mdl-color-text--blue-grey-300" data-badge="6">notifications</div>
+          <div class="secondary material-icons mdl-badge mdl-badge--overlap mdl-color-text--blue-grey-300" data-badge="2">email</div>
+          <div class="secondary material-icons mdl-badge mdl-badge--overlap mdl-color-text--blue-grey-300" data-badge="3">sms</div>
+        </div>        
+    </header>
+      
+    <main class="mdl-layout__content">         
+         
+        <aside class="mdl-grid mdl-color--blue-grey-500 mdl-shadow--2dp">
+            <div class="mdl-cell mdl-cell--10-col mdl-color-text--blue-grey-50">
+                <h4>User's Products</h4>
+                <em>These are the products assigned to the current user</em>
+            </div>
+            <div class="mdl-cell mdl-cell--2-col ">
+                <button class="mdl-button mdl-button--icon mdl-button--colored mdl-color-text--blue-grey-200">
+                  <i class="material-icons">info_outline</i>
+                </button>              
+                <button class="mdl-button mdl-button--icon mdl-button--colored mdl-color-text--blue-grey-200">
+                  <i class="material-icons">mode_edit</i>
+                </button> 
+                <button class="mdl-button mdl-button--icon mdl-button--colored mdl-color-text--blue-grey-200">
+                  <i class="material-icons">build</i>
+                </button>      
+                <button class="mdl-button mdl-button--icon mdl-button--colored mdl-color-text--blue-grey-200">
+                  <i class="material-icons">file_download</i>
+                </button>   
+                <button class="mdl-button mdl-button--icon mdl-button--colored mdl-color-text--blue-grey-200">
+                  <i class="material-icons">delete</i>
+                </button>                                                              
+            </div>
+        </aside>      
+
+       
+        <section class="mdl-grid">
+	<script type="text/javascript">
+		//Add a prototype to output a output a card.
+		Book.prototype.outputCard = function () {
+			document.write("<div class='mdl-cell mdl-card mdl-shadow--2dp'>");
+			document.write("<div class='mdl-card__media'>");
+			document.write("<img src='images/" + this.isbn + ".jpg' title='" + this.title +"'>");
+			document.write("</div>");
+			document.write("<div class='mdl-card__supporting-text'>");
+			document.write("<p>" + this.description + "</p>");
+			document.write("<h6>Adopters</h6>");
+			document.write("<ul>");
+			var len = this.universities.length;
+			for(let i = 0; i < len; i++) {
+				document.write("<li>"+ this.universities[i] + "</li>");
+			}
+			document.write("</ul>");
+			document.write("</div>");
+			document.write("<div class='mdl-card__actions mdl-card--border'>");
+			document.write("<a class='mdl-button'>READ MORE</a>");
+			document.write("</div>");
+			document.write("</div>");
+		};
+		var cards = [];
+		var book;
+		var len = books.length;
+		for(let i = 0; i < len; i++) {
+			var book = books[i];
+			bookObj = new Book(book.isbn, book.title, book.description, book.universities);
+			bookObj.outputCard();
+		}
+	</script>
+        </section>  
+    </main>
+      
+      
+</div>  <!-- end layout -->
+
+</body>
+</html>

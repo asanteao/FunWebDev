@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <title>Chapter 5</title>
+   <style>
+      table {
+         font-family: "Lucida Sans", Verdana, Arial, sans-serif;
+         font-size: 1.0em;
+         border-collapse:collapse;
+      }  
+      td, th {
+         padding: 0.75em;
+         border-right:1px dotted white;
+      } 
+      tbody {  
+         background-color: #BFAA8F;
+         color: black;
+      }  
+      thead, tfoot {
+         background-color: #362C42;
+         color: #F2E0BD;
+      }
+      caption {
+	      margin-left: -2000px;
+      }
+      tbody span.yes:before {
+	      content: url(images/yes16.png);
+      }
+      tbody th {
+	      text-align: right;
+	      color: #1D1626;
+	      background-color: #F2E0BD;
+      }
+      tfoot th {
+	      background-color: white;
+	      text-shadow: none;
+      }
+      tfoot, thead th:nth-last-child(1) {
+	      color: #C74223;
+	      text-shadow: 1px 1px 1px black;
+	      font-weight: bold;
+      }
+   </style>
+</head>
+<body>
+<table>
+   <caption>Pricing Table</caption>
+   <thead>
+      <tr>
+        <th></th>
+        <th scope="col">Free</th>
+        <th scope="col">Basic</th>
+        <th scope="col">Premium</th>
+      </tr>
+   </thead>
+   <tfoot>
+      <tr>
+         <th scope="row">Price per year</th>
+         <td>Free</td>
+         <td>$ 9.99</td>
+         <td>$ 19.99</td>
+      </tr>
+   </tfoot>
+   <tbody>
+      <tr>
+        <th scope="row">Upload Space</th>
+        <td>50MB</td>
+        <td>200MB</td>
+        <td>Unlimited</td>
+      </tr>
+      <tr>
+        <th scope="row">Daily Uploads</th>
+        <td>1</td>
+        <td>10</td>
+        <td>Unlimited</td>
+      </tr>
+      <tr>
+        <th scope="row">Total Uploads</th>
+        <td>20</td>
+        <td>100</td>
+        <td>Unlimited</td>
+      </tr>
+      <tr>
+        <th scope="row">Social Sharing</th>
+        <td></td>
+	<td><span class="check"></span></td>
+	<td><span class="check"></span></td>
+      </tr> 
+      <tr>
+        <th scope="row">Analytics</th>
+        <td></td>
+        <td></td>
+	<td><span class="yes">the span</span></td>
+      </tr> 
+   </tbody>
+
+</table>   
+</body>
+</html>

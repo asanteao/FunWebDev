@@ -1,0 +1,134 @@
+body, header, div, p, h1, h2, h3, h4 {
+   margin: 0;
+    padding: 0;
+    font-family: "Open Sans", "Arial", sans-serif;
+}
+h1, h2, h3, h4 {
+    font-family: 'Merriweather', "Times New Roman", serif;
+}
+header h1, header h2 {
+    color: white;
+}
+header h1 {
+    font-size: 48px;
+}
+header h2 {
+    font-size: 36px;
+}
+header span {
+	display: inline-block;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 24px;
+    width: 160px;
+    padding: 9px;
+    border: solid 1px white;
+}
+header span a:link, header span a:visited {
+    color: white;
+}
+     
+header img {
+	width: 100%;
+	height: 600px;
+	position: relative;
+	filter: brightness(20%);
+}
+header div {
+	position: absolute;
+	left: 20%;
+	top: 30%;
+	text-align: center;
+}
+article {
+	margin-left: 8%;
+	margin-right: 8%;
+}
+article h2 {
+	margin-top: 20px;
+}
+.highlights {
+	overflow: auto;
+}
+.highlights--media {
+	float: left;
+	padding: 10px;
+	padding-left: 0;
+	width: 24%;
+}
+.highlights--media img {
+	width: 100%;
+}
+.highlights--text {
+	width: 24%;
+	float: left;
+	padding: 10px;
+	padding-left: 0;
+}
+.highlights--button {
+	float: right;
+	background-color: orange;
+	color: white;
+}
+.highlights--container {
+	border-top: 1px solid gray;
+}
+.mosaic {
+	position: relative;
+	margin-top: 20px;
+}
+.mosaic--a {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.mosaic--b {
+	position: absolute;
+	left: 590px;
+	top: 0;
+}
+.mosaic--c {
+	position: absolute;
+	left: 590px;
+	top: 200px;
+}
+.mosaic--d {
+	position: absolute;
+	left: 885px;
+	top: 0px;
+}
+.mosaic--e {
+	position: absolute;
+	left: 0;
+	top: 400px;
+}
+.mosaic--f {
+	position: absolute;
+	left: 295px;
+	top: 400px;
+}
+.mosaic--g {
+	position: absolute;
+	left: 590px;
+	top: 400px;
+}
+.mosaic--h {
+	position: absolute;
+	left: 885px;
+	top: 400px;
+}
+.mosaic--i {
+	position: absolute;
+	left: 0;
+	top: 800px;
+}
+.mosaic--j {
+	position: absolute;
+	left: 295px;
+	top: 600px;
+}
+.mosaic--k {
+	position: absolute;
+	left: 885px;
+	top: 800px;
+}

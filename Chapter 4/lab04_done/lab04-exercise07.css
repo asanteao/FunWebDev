@@ -1,0 +1,23 @@
+header, footer {
+  color: white;
+  background-color: #213643;
+}
+nav {
+  background-color: #728B96;
+}
+
+h1, h2, h3 {
+ font-family: "Trebuchet MS", "Lucida Grande", Tahoma, sans-serif;
+}
+body {
+ font-family: Georgia, Cambria, "Times New Roman", serif;
+}
+
+#reviews {
+   border-bottom: solid 3pt #213643;
+   color: #ed8030;
+}
+
+h3~p  { 
+   color: #983C2A;
+}

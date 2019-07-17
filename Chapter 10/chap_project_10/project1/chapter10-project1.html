@@ -1,0 +1,95 @@
+<html>
+<head>
+<title>Chapter 10</title>
+<link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/styles.css">
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+</head>    
+<body class="tiled">
+<header>
+    <h1>Art Filters</h1>
+</header>
+<main>
+    <div id="sliderBox">
+        <form>
+           <label>Opacity: </label><p><input type="range" id="sliderOpacity" min="0" max="100" value="100" class="sliders" /> <span id="numOpacity">100</span>%</p>
+           <p><label>Saturation: </label><input type="range" id="sliderSaturation" min="1" max="300" value="100" class="sliders"/> <span id="numSaturation">100</span>%</p>
+           <p><label>Brightness: </label><input type="range" id="sliderBrightness" min="0" max="300" value="100" class="sliders" /> <span id="numBrightness">100</span>%</p>
+           <p><label>Hue Rotate: </label><input type="range" id="sliderHue" min="0" max="360" value="0" class="sliders" /> <span id="numHue">0</span>deg</p>
+           <p><label>Grayscale: </label><input type="range" id="sliderGray" min="0" max="100" value="0" class="sliders"/> <span id="numGray">0</span>%</p>
+           <p><label>Blur: </label><input type="range" id="sliderBlur" min="0" max="10" value="0" class="sliders" /> <span id="numBlur">0</span>px</p>
+           <p><button type="reset" id="resetFilters">Reset</button> </p>
+        </form>    
+    </div>
+    <figure id="imgManipulated">
+        <img src="images/medium/painting1.jpg" > 
+        <figcaption>
+            <em>Still Life with Flowers in a Glass Vase</em> <br>
+            Jan Davidsz. de Heem, 1650 - 1683
+        </figcaption>
+    </figure>   
+    <div id="thumbBox">
+        <div><img src="images/small/painting1.jpg"  alt="Still Life with Flowers in a Glass Vase" title="Jan Davidsz. de Heem, 1650 - 1683"/></div>
+        <div><img src="images/small/painting2.jpg"  alt="Portrait of Alida Christina Assink" title="Jan Adam Kruseman, 1833"/></div>
+        <div><img src="images/small/painting3.jpg"  alt="Self-portrait" title="Vincent van Gogh, 1887"/></div>
+        <div><img src="images/small/painting4.jpg"  alt="William II, Prince of Orange, and his Bride, Mary Stuart" title="Anthony van Dyck, 1641"/></div>
+        <div><img src="images/small/painting5.jpg"  alt="Milkmaid" title="Johannes Vermeer, c. 1660"/></div>
+    </div>
+</main>
+<script>
+	//Set listeners to the thumbnails to display the photo
+	$("#thumbBox img").on("click", function () {
+		var newSrc = $(this).attr("src").replace("small", "medium");
+		var thumbTitle = $(this).attr("title");
+		var thumbAlt = $(this).attr("alt");
+
+		var newFigImg = $("<img src='" + newSrc + "'/>");
+		var newEm = $("<em>").html(thumbAlt);
+		var figCaption = $("#imgManipulated figcaption").html(newEm);
+		figCaption.append("<br>");
+		figCaption.append(thumbTitle);
+		
+		//Change figure image and append caption
+		var fig = $("#imgManipulated").html(newFigImg);
+		fig.append(figCaption);
+	});
+
+	//Set listeners to the sliders
+	$(".sliders").on("change", function (e) {
+		var opacity = $("#sliderOpacity").val();
+		$("#numOpacity").html(opacity);
+
+		var saturation = $("#sliderSaturation").val();
+		$("#numSaturation").html(saturation);
+
+		var brightness = $("#sliderBrightness").val();
+		$("#numBrightness").html(brightness);
+
+		var hue = $("#sliderHue").val();
+		$("#numHue").html(hue);
+
+		var gray = $("#sliderGray").val();
+		$("#numGray").html(gray);
+
+		var blur = $("#sliderBlur").val();
+		$("#numBlur").html(blur);
+		
+		//Get the image of the figure and apply all filters separated by spaces
+		var filters = "opacity("+ opacity + "%) saturate("+saturation+"%) brightness("+brightness+"%) hue-rotate("+hue+"deg) grayscale("+gray+"%) blur("+blur+"px)";
+		$("#imgManipulated img").css("-webkit-filter", filters);
+		$("#imgManipulated img").css("filter", filters);
+	});
+
+	//Set listener to button to remove all filters from image
+	$("#resetFilters").click(function (e) {
+		$("#imgManipulated img").css("-webkit-filter", "none");
+		$("#imgManipulated img").css("filter", "none");
+	});
+</script>    
+</body>   
+</html>

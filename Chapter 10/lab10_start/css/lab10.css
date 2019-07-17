@@ -1,0 +1,96 @@
+/* styles for basic selector examples */
+
+.selected {
+     background-color: yellow;
+}
+
+/* styles for advanced selector example */
+
+.form-body {
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    
+  font-family: 'Arial Narrow', Candara, sans-serif;
+  font-size: 16px;
+  color: #4c4c4c;
+
+}
+
+.form-box {
+  margin: 20px auto;
+  width: 450px; 
+  height: 480px; 
+  border-radius: 8px/7px; 
+  background-color: #ebebeb; 
+  box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
+  border: solid 1px #cbc9c9;
+}
+
+
+.form-box form {
+  margin: 0 30px;
+}
+
+.form-box h1 {
+  font-size: 32px;
+  font-weight: 300;
+  color: #4c4c4c;
+  text-align: center;
+  padding-top: 5px;
+  margin-bottom: 10px;
+}
+
+
+.form-box hr {
+  color: #a9a9a9;
+  opacity: 0.3;
+}
+
+input[type=text],input[type=password] {
+  width: 200px; 
+  height: 37px; 
+  border-radius: 0px 4px 4px 0px/5px 5px 4px 4px; 
+  background-color: #fff; 
+  box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
+  border: solid 1px #cbc9c9;
+  margin-left: -5px;
+  margin-top: 13px; 
+  padding-left: 10px;
+}
+
+
+label {
+  display: inline-block;
+  width: 120px;
+  background-color: #FF6C3A;
+  padding: 8px 0px 8px 15px;
+  margin-left: 15px;
+  border-radius: 4px 0px 0px 4px;
+  color: white;
+  box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
+  border: solid 0px #cbc9c9;
+}
+
+
+
+.form-box button {
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  padding: 8px 25px 0px 15px;
+  margin: 15px 8px 20px 15px;
+  height: 40px;  
+  width: 345px; 
+  border-radius: 5px; 
+  background-color: #3b9ad8;  
+  box-shadow: 3px 3px rgba(58,87,175,.75);
+}
+
+/* styles for event listener example */
+
+.panel { width: 200px; height: 200px; background-color: #CFD8DC; font-weight: bold; font-size: 20px;
+    display: flex; align-items: center; justify-content: center; } 
+span#message { font-size: 20px; }

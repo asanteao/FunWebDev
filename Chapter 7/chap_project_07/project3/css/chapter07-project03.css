@@ -1,0 +1,91 @@
+.topHeaderRow a {
+	color: white;
+}
+.topHeaderRow {
+	background-color: #051f58;
+}
+.topHeaderRow ul {
+	width: max-content;
+	margin-left: auto;
+	padding-right: 30px;
+	padding-top: 10px;
+	margin-bottom: 0;
+}
+
+.topHeaderRow ul li {
+	display: inline;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+nav {
+	background: #46469e;
+	color: white;
+}
+
+nav a {
+	color: white;
+}
+
+.logo {
+	font: bold 25px Lobster;
+}
+
+.left-aside-top {
+	border: 1px solid #051f58;
+	margin-bottom: 20px;
+}
+
+.left-aside-top ul {
+	margin-bottom: 0;
+}
+
+.left-aside-top div {
+	background-color: #051f58;
+	padding:10px;
+	padding-left: 20px;
+	color: white;
+	font-weight: bold;
+}
+
+.left-aside-bottom {
+	border: 1px solid #051f58;
+}
+
+.left-aside-bottom ul {
+	margin-bottom: 0;
+}
+
+.left-aside-bottom div {
+	background-color: #051f58;
+	padding:10px;
+	padding-left: 20px;
+	color: white;
+	font-weight: bold;
+}
+
+footer {
+	background: #46469e;
+	color: white;
+}
+
+footer .btn {
+	margin: 5px;
+}
+
+.page-bottom {
+	box-sizing: border-box;
+	width: 100%;
+	background: #051f58;
+	text-align: center;
+}
+
+.caption .btn {
+	margin: 3px;
+}
+
+div.thumbnail {
+	padding-left: auto;
+	padding-right: auto;
+	text-align: center;
+}

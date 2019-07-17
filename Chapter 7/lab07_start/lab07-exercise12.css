@@ -1,0 +1,60 @@
+html, body, header, footer, aside, div, p, h1, h2, h3, li, ul
+{
+   margin: 0;
+   padding: 0;
+   font-family { font-family: Verdana, Geneva, sans-serif; }
+   font-size: 0.8em;
+}
+
+h1 { font-size: 1.5em; margin: 0.25em;}
+h2 { font-size: 1.25em; margin: 0.25em;}
+h3 { font-size: 1em; margin: 0.25em;}
+p { margin: 0.25em 0; }
+a:link, a:visited { color: #090388; }
+
+li { list-style-type: none; margin: 0.25em 0; }
+
+header {
+   color: white;
+   background-color: #262626;
+   height: 3em;
+   padding: 0.5em;
+}
+
+main {
+   width: 90%;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+div#container {
+   position: relative; 
+}
+nav {
+  color: white;
+  background-color: #A9A9A9;
+  padding: 0.5em;  
+  width: 10em;
+  position: absolute;
+  left: 0;
+  top: 0; 
+}
+
+div#main {
+    padding: 0.5em;
+    margin-left: 12em;
+    margin-right: 2em;
+}
+
+footer {
+  color: white;
+  background-color: #2F4F4F;
+  height: 3em;
+  padding: 0.5em;
+}
+
+.box { 
+   border: 1pt solid black;
+   margin: 3px 3px 10px 3px;
+   padding: 5px;
+}   

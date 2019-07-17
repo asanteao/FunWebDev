@@ -1,0 +1,87 @@
+/* general text formatting */
+
+
+body {
+   font-family: "Roboto", Verdana, Arial, sans-serif;
+   font-size: 100%;
+ background-color: #ECEFF1;    
+}
+
+section {
+   background-color: white;
+   margin: 1em 4em 1em 4em;
+   border: solid 1pt black;
+
+}
+section h3 {
+  color: white;
+  padding: 0.75rem;
+  background-color: #263238; 
+}
+
+.status {
+    border-radius: 0.25rem;
+    padding: 3px;
+    color: white;
+    
+}
+.status-processing {
+    background-color:    #E65100;    
+}
+.status-shipped {
+    background-color:   #4CAF50;    
+}
+.status-pending {
+    background-color:    #03A9F4;    
+}
+
+form, table {
+	padding-left: 1rem;
+	padding-top: 1rem;
+	padding-right: 1rem;
+	padding-bottom: 1rem;
+}
+
+/* table formatting */
+
+
+table caption {
+	background-color: #607D8B; 
+	color: white;
+	padding: 0.5rem;
+	margin: 0.5rem;
+	width: 97%;
+}
+
+table {
+	width: 97%;
+}
+td {
+	padding: 0.2rem;
+	text-align: left;
+}
+th {
+	text-align: left;
+}
+/* form formatting */
+
+
+legend {
+	background-color: #607D8B; 
+	color: white;
+	padding: 0.5rem;
+	width: 98.5%;
+	text-align: center;
+}
+
+
+input[type=submit] {
+   background-color: #673AB7;
+    color: white;
+    border-style: none;
+    
+}
+input[type=submit]:hover {
+    background-color: #6200EA;
+}
+

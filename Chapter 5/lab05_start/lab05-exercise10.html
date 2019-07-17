@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <title>Chapter 5</title>
+   <style>
+
+   </style>
+</head>
+<body>
+<form method="get" action="http://www.randyconnolly.com/tests/process.php">
+  <fieldset>
+     <legend>Sample Choice Controls</legend>
+         <p>
+            <label>Countries: </label><br/>
+	    <select name="country">
+		    <option>Australia</option>
+		    <option>Canada</option>
+		    <option>France</option>
+		    <option>Sweden</option>
+		    <option>Thailand</option>
+		    <option>United States</option>
+	    </select>
+         </p>
+         <p>
+            <label>Continent: </label><br/>
+	    <select size="4" name="continent">
+		    <option value="NA">North America</option>
+		    <option value="EU">Europe</option>
+		    <option value="AS">Asia</option>
+		    <option value="SA">South America</option>
+	    </select>
+         </p>
+         <p>
+            <label>City: </label><br/>
+	    <select name="city">
+		    <optgroup label="North America">
+			    <option>Calgary</option>
+			    <option>Los Angeles</option>
+		    </optgroup>
+		    <optgroup label="Europe">
+			    <option>London</option>
+			    <option>Paris</option>
+			    <option>Prague</option>
+		    </optgroup>
+	    </select>
+         </p>          
+         <p>
+            <label>Gender of Traveller: </label><br/>
+	    <input type="radio" name="gender" value="1">Female<br/>
+	    <input type="radio" name="gender" value="2">Male<br/>
+         </p>     
+         <p>
+            <label>How did you hear about the site: </label><br/>
+	    <input type="checkbox" name="hear" value="email">Email<br/>
+	    <input type="checkbox" name="hear" value="friend">Friend<br/>
+	    <input type="checkbox" name="hear" value="email">Email<br/>
+         </p>      
+
+     <input type="submit" />
+  </fieldset>
+</form>
+</body>
+</html>

@@ -1,0 +1,48 @@
+.box {
+    background-color: green;
+    width: 100px;
+    height: 100px;
+    margin: 100px;
+
+   /* animation-name: animOne;*/
+    animation-name: animTwo;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-delay: 0.5s;
+}
+@keyframes animOne {
+	from {
+		opacity: 1;
+		margin-left: 100px;
+	}
+	to {
+		opacity: 0.5;
+		transform: scale(1.5) rotate(90deg);
+		margin-left: 400px;
+	}
+}
+
+@keyframes animTwo {
+	25% {
+		background-color: red;
+		transform: scale(1.5) rotate(90deg);
+		margin-left: 400px;
+	}
+	50% {
+		background-color: yellow;
+		transform: scale(1);
+		margin-top: 400px;
+		border-radius: 100%;
+	}
+	75% {
+		background-color: blue;
+		margin-left: 100px;
+		transform: scale(0.5);
+	}
+	100% {
+		background-color: green;
+		border-radius: 0;
+		margin-top: 100px;
+		transform: scale(1) rotate(0);
+	}
+}

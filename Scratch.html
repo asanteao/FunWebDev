@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Scratch</title>
+	<style>
+		/*fades content to invisible across 1.5 seconds*/
+		.makeItDisappear {
+			-webkit-filter: opacity(0);
+			-webkit-transition: -webkit-filter 1.5s;
+
+			filter: opacity(0);
+			transition-duration: 1.5s;
+			transition-property: filter -webkit-filter;
+		}
+
+		/*applies grayscale filter across 1.5 seconds*/
+		.makeItGray {
+			-webkit-filter: grayscale(100%);
+			-webkit-transition: -webkit-filter 1.5s;
+			filter: grayscale(100%);
+			transition: filter 1.5s;
+		}
+
+		/*removes filters across 1.5 seconds */
+		.makeItNormal {
+			-webkit-filter: none;
+			-webkit-transition: -webkit-filter 1.5s;
+			filter: none;
+			transition: filter 1.5s;
+		}
+		
+		img {
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<div id="main">
+		<img src="sample.jpg" id="mainImage" alt="main image" />
+		<p id="content">
+		Lorem ipsum dolor sit amet, consecture adipiscing elit, ...
+		</p>
+		<button id="testButton">Hide</button>
+	</div>
+	<script type="text/javascript">
+		window.addEventListener("load", function() {
+			var btn = document.getElementById("testButton");
+			console.log(document);
+
+			btn.addEventListener("click", function (e) {
+				var content = document.getElementById("content");
+				if(btn.innerHTML == "Hide") {
+					btn.innerHTML = "Show";
+					content.className = "makeItDisappear";
+					setTimeout(function () {
+						content.style.display = "none";
+					}, 1000);
+				}
+				else {
+					btn.innerHTML = "Hide";
+					content.style.display = "block";
+					setTimeout(function() {
+						content.className = "makeItNormal";
+					}, 500);
+				}
+			});
+
+			var img = document.getElementById("mainImage");
+			img.addEventListener("mouseover", function () {
+				img.className = "makeItGray";
+			});
+
+			img.addEventListener("mouseout", function() {
+				img.className = "makeItNormal";
+			});
+		});
+	</script>
+</body>
+</html>
+

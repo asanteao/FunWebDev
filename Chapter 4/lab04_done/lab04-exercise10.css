@@ -1,0 +1,70 @@
+header, footer {
+  color: white;
+  background-color: #213643;
+}
+nav {
+  background-color: #728B96;
+}
+
+h1, h2, h3 {
+ font-family: "Trebuchet MS", "Lucida Grande", Tahoma, sans-serif;
+}
+body {
+ font-family: Georgia, Cambria, "Times New Roman", serif;
+}
+
+#reviews {
+   border-bottom: solid 3pt #213643;
+   color: #ed8030;
+}
+.first {
+   color: #728B96;
+   font-style: italic;
+}
+
+a:link {
+   font-weight: bold;
+   color: #47B3D7;
+}
+a:visited {
+   color: #BB78FF;
+}
+a:hover {
+   background-color: #FFFFCC;
+}
+
+nav ul li {
+   list-style: none;
+   display: inline;
+   margin: 1em;
+}
+nav {
+   padding: 0.25em;
+}
+
+figure div {
+   margin-top: 0.25em;
+   font-size: 70%;
+   padding: 0.5em;
+   width: 485px;
+   background-color: #9FAAB0;
+   border: solid 1px #999999;
+   border-radius: 4px;
+}
+
+/*figure div p {
+  background: url(images/share.png) no-repeat;
+  padding-left: 18px;
+  background-position: 0 4px;
+}*/
+
+span.share {
+  display: inline-block;
+  background: url(images/glyphicons-halflings.png) no-repeat;
+  width: 14px;
+  height: 14px;
+  background-position: -120px -72px;  
+  padding-right: 5px;
+}
+
+

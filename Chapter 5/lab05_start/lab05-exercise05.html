@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <title>Chapter 5</title>
+   <style>
+ 	table, td {
+		font-family: "Lucida sans", Verdana, Arial, sans-serif;
+		font-size: 1em;
+	}
+	tbody {
+		background-color: #F1F1F1;
+	}
+	td, th {
+		padding: 0.5em;
+	}
+	thead, tfoot {
+		background-color: #CACACA;
+	}
+	caption {
+		font-size: 1.2em;
+		font-weight: bold;
+		background-color: #DCA806;
+		padding: 0.5em;
+	}
+	tbody tr:nth-child(odd) {
+		background-color: white;
+	}
+   </style>
+</head>
+<body>
+<table>
+   <caption>Pricing Table</caption>
+   <thead>
+      <tr>
+        <th></th>
+        <th scope="col">Free</th>
+        <th scope="col">Basic</th>
+        <th scope="col">Premium</th>
+      </tr>
+   </thead>
+   <tfoot>
+      <tr>
+         <th scope="row">Price per year</th>
+         <td>Free</td>
+         <td>$ 9.99</td>
+         <td>$ 19.99</td>
+      </tr>
+   </tfoot>
+   <tbody>
+      <tr>
+        <th scope="row">Upload Space</th>
+        <td>50MB</td>
+        <td>200MB</td>
+        <td>Unlimited</td>
+      </tr>
+      <tr>
+        <th scope="row">Daily Uploads</th>
+        <td>1</td>
+        <td>10</td>
+        <td>Unlimited</td>
+      </tr>
+      <tr>
+        <th scope="row">Total Uploads</th>
+        <td>20</td>
+        <td>100</td>
+        <td>Unlimited</td>
+      </tr>
+      <tr>
+        <th scope="row">Social Sharing</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr> 
+      <tr>
+        <th scope="row">Analytics</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr> 
+   </tbody>
+
+</table>   
+</body>
+</html>

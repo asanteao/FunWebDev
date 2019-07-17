@@ -1,0 +1,82 @@
+/*BODY*/
+body {
+	background-image: url("images/art-background4.jpg") ;
+	background-size: 100%;
+	background-repeat: repeat;
+	padding-left: 3.5rem;
+	padding-right: 3.5rem;
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
+	color: white;
+}
+
+/*HEADER*/
+header {
+	box-shadow: 10px 10px 10px rgba(23,23,23,0.5);
+	width: 100%;
+	max-width: 40rem;
+	background: rgba(10,10,10, 0.5);
+}
+header h1 {
+	font: bold 3rem Merriweather, sans-serif;
+	padding: 20px;
+}
+header h2 {
+	padding: 20px;
+	padding-top:5px;
+	font: 1rem Merriweather, sans-serif;
+}
+
+/*MAIN*/
+main {
+	box-shadow: 10px 10px 10px rgba(23,23,23,0.5);
+	width: 100%;
+	max-width: 40rem;
+	background: rgba(255,255,255, 0.5);
+	color: black;
+	font: bold 1rem Merriweather, sans-serif;
+}
+main h2 {
+	margin-top: 4rem;
+	font: bold 1.5rem Merriweater, sans-serif;
+	color: black;
+	padding: 20px;
+	background: rgba(224,224,224,0.5)
+}
+main p {
+	padding: 20px;
+}
+#timeline {
+	color: white;
+	background: rgba(66,66,66,0.5);
+	margin-right: 20px;
+	margin-left: 20px;
+	width: 50%;
+}
+#timeline sup {
+	color: red;
+}
+#footnote {
+	color: red;
+	font: italic 0.8rem Merriweather, Helvetica, Arial, sans-serif;
+}
+
+/*FOOTER*/
+footer {
+	box-shadow: 10px 10px 10px rgba(23,23,23,0.5);
+	width: 100%;
+	max-width: 40rem;
+	background: rgba(10,10,10, 0.5);
+	margin-top: 30px;
+}
+footer div {
+	padding: 20px;
+}
+footer h2 {
+	padding: 20px;
+	padding-bottom: 0;
+}
+footer img {
+	padding: 5px;
+	border: 1px solid rgba(255,255,255,0.5);
+}

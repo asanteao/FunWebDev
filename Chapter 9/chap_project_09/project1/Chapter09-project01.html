@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+   <meta charset="utf-8">
+   <title>Chapter 9</title>
+   <link rel="stylesheet" href="css/styles.css" />
+   <script type="text/javascript" src="js/chapter09-project01.js"></script>
+</head>
+<body>
+<form method="get" action="" id="mainForm">
+   <fieldset>
+      <legend>Edit Art Work Details</legend>
+      <table>
+         <tr>
+            <td colspan="2">
+               <p>
+               <label>Title</label><br/>
+               <input type="text" name="title" id="title" class="required hilightable" />
+               </p>
+               <p>
+               <label>Description</label><br/>
+               <input type="text" name="description" id="description" class="required hilightable">
+               </p>            
+            </td>
+         </tr>
+         <tr>
+            <td> 
+               <p> 
+               <label>Genre</label><br/>
+               <select name="genre" class="hilightable">
+                  <option>Choose genre</option> 
+                  <option>Abstract</option>
+                  <option>Baroque</option>
+                  <option>Gothic</option>
+                  <option>Renaissance</option>
+               </select>
+               </p>
+               <p> 
+               <label>Subject</label><br/>
+               <select name="subject" class="hilightable">
+                  <option>Choose subject</option> 
+                  <option>Animals</option>
+                  <option>Landscape</option>
+                  <option>People</option>
+               </select>
+               </p>
+               <p>	
+               <label>Medium</label><br/>               
+               <input type="text" name="medium" id="medium" class="hilightable"/>
+               </p>
+               <p>	
+               <label>Year</label><br/>               
+               <input type="text" name="year" id="year" class="hilightable required"/>
+               </p>  
+               <p>	
+               <label>Museum</label><br/>               
+               <input type="text" name="museum" id="museum" class="hilightable"/>
+               </p>                             
+            </td>
+            <td>
+               <div class="box">
+                  <label>Type </label><br/>
+                  <input type="radio" name="type" value="1" checked>Painting<br/>
+                  <input type="radio" name="type" value="2">Sculpture<br/>
+               </div>
+               <div class="box">
+                  <label>Image Creative Commons Specification </label><br/>
+                  <input type="checkbox" name="cc" >Attribution <br/>
+                  <input type="checkbox" name="cc" >Noncommercial <br/>    
+                  <input type="checkbox" name="cc" >No Derivative Works <br/>  
+                  <input type="checkbox" name="cc" >Share Alike
+               </div>               
+            </td>
+         </tr>
+ 
+         <tr>
+            <td colspan="2">
+               <div class="rectangle centered"> 
+                  <input type="submit" class="btn"> <input type="reset" value="Clear Form" class="btn">      
+               </div
+            </td>
+         </tr>
+      </table>
+   </fieldset>
+</form>
+</body>
+</html>
