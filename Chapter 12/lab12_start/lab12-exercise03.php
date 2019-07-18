@@ -29,9 +29,17 @@ $players = array("Jhan Belig" => 189,
                  "Leo M. Toalde" => 192,
                  "Richard Bee" => 281,
                  "Travis Wise" =>182);
-echo "<pre>";
-print_r($players);
-echo "</pre>";
+asort($players);
+$players = array_reverse($players);
+
+echo '<table class="table table-striped">';
+echo '<tr><th>Name</th><th>Score</th></tr>';
+foreach($players as $name => $score) {
+	echo '<tr>';
+	echo '<td>' . $name . '</td><td>'. $score . '</td>';
+	echo '</tr>';
+}
+echo '<table>';
 ?>
  </div>
 </body>
