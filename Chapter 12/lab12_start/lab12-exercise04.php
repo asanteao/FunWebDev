@@ -1,7 +1,12 @@
 <?php
 
 function displayPostStatus() {
-   echo "No Post Detected";
+	if($_SERVER["REQUEST_METHOD"] == "POST" && $_POST['alias'] != "") {
+		echo "Hello, " . $_POST['alias'];
+	}
+	else {
+		echo "No Post Detected";
+	}
 }
 
 ?>
@@ -22,7 +27,7 @@ function displayPostStatus() {
 
  <div class="container theme-showcase" role="main">  
    <div class="jumbotron">
-      <h1><?php displayPostStatus(); ?></h1>
+      <h1><?php displayPostStatus(); /*echo "<pre>"; print_r($_POST); echo '</pre>';*/ ?></h1>
    </div>
    <form action='' method='post'>
       Enter Something: <input type='text' name='alias' />

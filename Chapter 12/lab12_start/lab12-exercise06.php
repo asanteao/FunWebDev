@@ -14,6 +14,20 @@
 <pre>
 <?php
 print_r($_SERVER);
+
+echo '<h1>Server Side Values</h1>';
+echo 'SERVER_NAME: '.$_SERVER['SERVER_NAME'] . "<br/>";
+echo 'SERVER_SOFTWARE: '.$_SERVER['SERVER_SOFTWARE'] . "<br/>";
+echo 'SERVER_ADDR: '.$_SERVER['SERVER_ADDR'] . "<br/>";
+
+echo '<h1>Headers from the client</h1>';
+echo 'REMOTE_ADDR: ' .$_SERVER['REMOTE_ADDR'] . '<br>';
+echo 'HTTP_USER_AGENT: ' .$_SERVER['HTTP_USER_AGENT'] . '<br>';
+echo 'HTTP_REFERER: ' .$_SERVER['HTTP_REFERER'] . '<br>';
+
+$browser = get_browser($_SERVER['HTTP_REFERER'], true);
+print_r($browser);
+
 ?>
 </pre>
 </body>

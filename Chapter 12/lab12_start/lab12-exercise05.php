@@ -9,13 +9,13 @@ $content = array("Home" => array("Home Page","This page is the home page"),
                  "Page 3" => array("The third page", "third page content here"),
                  "Page 4" => array("The fourth page", "fourth page content here"));
 
-
+$justContent = array_values($content);
                  
 ?>
 <html lang="en">
 <head>
    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-   <title></title>   
+   <title><?php echo $justContent[$_GET['page']-1][0]; ?></title>   
    
    <!-- Latest compiled and minified Bootstrap Core CSS -->
    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -32,12 +32,20 @@ $content = array("Home" => array("Home Page","This page is the home page"),
 
 $pageCount =1;
 foreach ($content as $key => $elements) {
-   echo "<li><a href='#'>$key</a></li>";
-   $pageCount++;
+ 	echo "<li";
+	echo ($pageCount == $_GET['page'] ? " class='active'" : "");
+	echo "><a href='?page=$pageCount'>$key</a></li>";
+	if($_GET['page'] == $pageCount) {
+		echo $justContents[$_GET['page']-1][1];
+	}
+	$pageCount++;
 }
-
 ?>
 </ul>
-
+<?php 
+echo '<p>';
+echo $justContent[$_GET['page']-1][1];
+echo '</p>';
+?>
 </body>
 </html>
