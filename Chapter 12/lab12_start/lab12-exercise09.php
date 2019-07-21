@@ -36,9 +36,16 @@ function outputForecast($day,$high,$low) {
 <?php 
 //start by echoing the data in the file
 $fileContents = file_get_contents("datafile.txt");
-echo $fileContents;
-
-
+$daysOfWeek = explode("\n", $fileContents);
+foreach($daysOfWeek as $day) {
+	if($day != '') {
+		$elements = explode(",", $day);
+		$date = $elements[0] . ' ' . $elements[1] . ', ' . $elements[2];
+		$hi = $elements[3];
+		$lo = $elements[4];
+		outputForecast($date, $hi, $lo);
+	}
+}
 ?>
 </div>
 
