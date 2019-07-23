@@ -1,7 +1,8 @@
 <?php
 include 'travel-data.inc.php';
 
-
+asort($countries);
+asort($continents);
     
 ?>
 
@@ -37,20 +38,25 @@ include 'travel-data.inc.php';
                     
                     
                     <div class="col-md-8">                                                
-                        <img class="img-responsive" src="images/medium/6114850721.jpg" alt="View of Cologne">
-                        <p class="description">View of Cologne from atop the Cologne Cathedral</p>
+			<?php
+				if(isset($_GET['id'])) {
+					$imgArray = $images[$_GET['id']];
+					echo '<img class="img-responsiv" src="images/medium/'.$imgArray['path'].'" alt="'.$imgArray['title'].'">';
+					echo '<p class="description">'.$imgArray['description'].'</p>';
+				}
+			?>
                     </div>
 
                     <div class="col-md-4">                                                
-                        <h2>View of Cologne</h2>
+			<?php echo '<h2>'. $imgArray['title']. '</h2>'; ?>
 
                         <div class="panel panel-default">
                             <div class="panel-body">
                                 <ul class="details-list">
-                                    <li>By: <a href="#">Joao Fernandes</a></li>
-                                    <li>Country: <a href="#">Germany</a></li>
-                                    <li>City: <a href="#">Cologne</a></li>
-                                    <li>Taken on: August 8, 2017</li>
+				<li>By: <a href="#"><?php echo $imgArray['user']; ?></a></li>
+				<li>Country: <a href="#"><?php echo $imgArray['country'];?></a></li>
+                                    <li>City: <a href="#"><?php echo $imgArray['city'];?></a></li>
+				    <li>Taken on: <?php echo $imgArray['taken'];?></li>
                                 </ul>
                             </div>
                         </div>
@@ -73,10 +79,12 @@ include 'travel-data.inc.php';
                         <h4>Tags</h4>
                         <div class="panel panel-default">
                             <div class="panel-body" id="tags">
-                                                                    <span class="label label-default">cathedral</span>
-                                                                    <span class="label label-default">high</span>
-                                                                    <span class="label label-default">birds-eye</span>
-                                
+				<?php
+					$tags = $imgArray['tags'];
+					foreach($tags as $tag) {
+						echo '<span class="label label-default">'.$tag.'</span> ';
+					}
+				?>
                             </div>
                         </div>
                         
