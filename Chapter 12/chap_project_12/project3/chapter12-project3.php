@@ -85,7 +85,7 @@ if(isset($_GET['id'])) {
               <!-- mdl-cell + mdl-card -->
               <div class="mdl-cell mdl-cell--7-col card-lesson mdl-card  mdl-shadow--2dp">
                 <div class="mdl-card__title mdl-color--orange">
-                  <h2 class="mdl-card__title-text">Customers</h2>
+                <h2 class="mdl-card__title-text">Customers</h2>
                 </div>
                 <div class="mdl-card__supporting-text">
                     <table class="mdl-data-table  mdl-shadow--2dp">
