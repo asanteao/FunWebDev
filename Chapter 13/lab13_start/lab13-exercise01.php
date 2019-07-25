@@ -39,6 +39,9 @@ foreach($forecast as $oneDay){
 ?>
 </div>
 
-
 </body>
+<footer>
+<h3>Record High: <?php echo Forecast::$allTimeHigh; ?></h3>
+<h3>Record Low: <?php echo Forecast::$allTimeLow; ?></h3>
+</footer>
 </html>

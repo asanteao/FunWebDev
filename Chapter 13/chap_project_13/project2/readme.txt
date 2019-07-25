@@ -1,0 +1,1 @@
+Note: The reference to travel-image.php in step 4 should be to detail.php.

@@ -23,7 +23,7 @@ include_once("Vehicle.class.php");
 
 
 $modelT =   new Vehicle("Ford", "Model-T", "Gas","30");
-$hybridCar =   new Vehicle("Ford", "Prius", "Hybrid","160");
+$hybridCar =   new LandVehicle("Ford", "Prius", "Hybrid","160", 4);
 
 echo $modelT;
 echo $hybridCar;

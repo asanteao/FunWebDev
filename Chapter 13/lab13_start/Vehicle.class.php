@@ -31,4 +31,15 @@ class Vehicle {
       }
 
 }
+
+class LandVehicle extends Vehicle {
+    private $wheels;
+
+    function __construct($mk, $md, $f, $spd, $whlCount) {
+        parent::__construct($mk, $md, $f, $spd);
+        $this->wheels = $whlCount;
+    }
+}
+
+//Stopping here because the rest of this lab is trivial OOP concepts (inheritance, overriding, etc)
 ?>

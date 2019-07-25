@@ -27,10 +27,10 @@ $oneday = 60*60*24;
 $forecast = array ();
 for ($i=0;$i<7;$i++) {
    $dayOne = new Forecast();
-   $dayOne->high = $i*5;
-   $dayOne->low = $i*-5;
-   $dayOne->date = date("d M, Y", $today+$i*$oneday);
-   $dayOne->description = "Sunny";
+   $dayOne->setHigh($i*5);
+   $dayOne->setLow($i*-5);
+   $dayOne->setDate(date("d M, Y", $today+$i*$oneday));
+   $dayOne->setDescription("Sunny");
    $forecast[]=$dayOne;
 }
 foreach($forecast as $oneDay) {
