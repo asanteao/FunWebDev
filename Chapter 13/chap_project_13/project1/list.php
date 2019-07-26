@@ -1,6 +1,5 @@
 <?php
 include 'travel-data-classes.php';
-
 asort($countries);
 
 // we will display the filtered array
@@ -67,18 +66,18 @@ else {
 		<ul class="caption-style-2">
           <?php foreach ($filtered as $img) { ?>
 			<li>
-                <a href="detail.php?id=<?php echo $img['id']; ?>" class="img-responsive">
-				<img src="images/square/<?php echo $img['path']; ?>" alt="<?php echo $img['title']; ?>">
+                <a href="detail.php?id=<?php echo $img->getID(); ?>" class="img-responsive">
+                <?php echo $img; ?>
 				<div class="caption">
 					<div class="blur"></div>
 					<div class="caption-text">
-						<h1><?php echo $img['title']; ?></h1>
+						<h1><?php echo $img->getTitle(); ?></h1>
 					</div>
 				</div>
                     </a>
-			</li>        
+			</li>
           <?php } ?>
-       </ul>       
+       </ul>
 
       
     </main>

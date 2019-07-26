@@ -13,6 +13,7 @@ $countries["GB"] = "United Kingdom";
 
 
 $images = array();
+//The syntax below appends to the array
 $images[] = new TravelPhoto("images/square/6114850721.jpg", "View of Cologne", "View of Cologne from atop the Cologne Cathedral",  50.941149, 6.957358 );
 
 $images[] = new TravelPhoto("images/square/9495574327.jpg", "Arch of Septimus Severus", "In the Roman Forum", 41.892949, 12.484972);
