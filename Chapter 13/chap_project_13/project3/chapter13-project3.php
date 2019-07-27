@@ -68,10 +68,10 @@ $customers = readCustomers('data/customers.txt');
 
                          foreach ($customers as $cust) {
                            echo '<tr>';
-                           echo '<td class="mdl-data-table__cell--non-numeric"><a href="chapter12-project3.php?customer=' . $cust['id'] . '">' . $cust['name'] . '</a></td>';
-                           echo '<td class="mdl-data-table__cell--non-numeric">' . $cust['university'] . '</td>';
-                           echo '<td class="mdl-data-table__cell--non-numeric">' . $cust['city'] . '</td>';   
-                           echo '<td><span class="inlinesparkline">' . $cust['sales'] . '</span></td>';
+                           echo '<td class="mdl-data-table__cell--non-numeric"><a href="chapter13-project3.php?customer=' . $cust->getCustomerID() . '">' . $cust->getName() . '</a></td>';
+                           echo '<td class="mdl-data-table__cell--non-numeric">' . $cust->getUniversity() . '</td>';
+                           echo '<td class="mdl-data-table__cell--non-numeric">' . $cust->getCity() . '</td>';
+                           echo '<td><span class="inlinesparkline">' . $cust->getSales() . '</span></td>';
                            echo '</tr>    ';    
                         } 
                         ?>            
@@ -101,10 +101,10 @@ $customers = readCustomers('data/customers.txt');
                       <h2 class="mdl-card__title-text">Customer Details</h2>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <h4><?php echo $requestedCustomer['name']; ?></h4>
-                        <?php echo $requestedCustomer['university']; ?><br>
-                        <?php echo $requestedCustomer['address']; ?><br>
-                        <?php echo $requestedCustomer['city'] . ', ' . $requestedCustomer['country']; ?>        
+                        <h4><?php echo $requestedCustomer->getName(); ?></h4>
+                        <?php echo $requestedCustomer->getUniversity(); ?><br>
+                        <?php echo $requestedCustomer->getAddress(); ?><br>
+                        <?php echo $requestedCustomer->getCity() . ', ' . $requestedCustomer->getCountry(); ?>
                                                                                                                                                                            
                     </div>    
                   </div>  <!-- / mdl-cell + mdl-card -->   
@@ -121,7 +121,7 @@ $customers = readCustomers('data/customers.txt');
 
                            $orders = readOrders( $_GET['customer'], 'data/orders.txt' );
                            if ( is_null($orders) ) {  
-                                echo 'No orders for ' . $requestedCustomer['name'];        
+                                echo 'No orders for ' . $requestedCustomer->getName();
                            } else {
                             ?>                                         
 
@@ -135,15 +135,15 @@ $customers = readCustomers('data/customers.txt');
                               </thead>
                               <tbody>
                                
-                                 <?php foreach ($orders as $ord) { 
+                                 <?php foreach ($orders as $ord) {
 
                                     echo '<tr>';
-                                    echo '<td><img src="images/tinysquare/' . $ord['isbn'] . '.jpg"></td>';
-                                    echo '<td>' . $ord['isbn'] . '</td>';
-                                    echo '<td class="mdl-data-table__cell--non-numeric"><a href="chapter12-project03.php?isbn=' . $ord['isbn'] . '">' . $ord['title'] . '</td>';
+                                    echo '<td><img src="images/tinysquare/' . $ord->getBookISBN() . '.jpg"></td>';
+                                    echo '<td>' . $ord->getBookISBN() . '</td>';
+                                    echo '<td class="mdl-data-table__cell--non-numeric"><a href="chapter12-project03.php?isbn=' . $ord->getBookISBN() . '">' . $ord->getBookTitle() . '</td>';
                                     echo '</tr>    ';  
 
-                                 } ?>                               
+                                 } ?>
                     
                               </tbody>
                             </table>
