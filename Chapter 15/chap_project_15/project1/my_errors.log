@@ -1,0 +1,22 @@
+[13-Aug-2019 14:35:57 UTC] PHP Warning:  asort() expects parameter 1 to be array, null given in /home/aasante/Development/Web/Fundamentals-of-Web-Development/Chapter 15/chap_project_15/project1/chapter15-project1.php on line 7
+[13-Aug-2019 14:35:57 UTC] PHP Notice:  Undefined variable: html in /home/aasante/Development/Web/Fundamentals-of-Web-Development/Chapter 15/chap_project_15/project1/chapter15-project1.php on line 8
+[13-Aug-2019 14:35:57 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_query() in /home/aasante/Development/Web/Fundamentals-of-Web-Development/Chapter 15/chap_project_15/project1/chapter15-project1.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/aasante/Development/Web/Fundamentals-of-Web-Development/Chapter 15/chap_project_15/project1/chapter15-project1.php on line 10
+[13-Aug-2019 14:37:31 UTC] PHP Notice:  Undefined offset: -5 in /home/aasante/Development/Web/Fundamentals-of-Web-Development/Chapter 15/chap_project_15/project1/left.inc.php on line 7
+[13-Aug-2019 14:37:31 UTC] PHP Notice:  Undefined offset: -4 in /home/aasante/Development/Web/Fundamentals-of-Web-Development/Chapter 15/chap_project_15/project1/left.inc.php on line 7
+[13-Aug-2019 14:37:31 UTC] PHP Notice:  Undefined offset: -3 in /home/aasante/Development/Web/Fundamentals-of-Web-Development/Chapter 15/chap_project_15/project1/left.inc.php on line 7
+[13-Aug-2019 14:37:31 UTC] PHP Notice:  Undefined offset: -2 in /home/aasante/Development/Web/Fundamentals-of-Web-Development/Chapter 15/chap_project_15/project1/left.inc.php on line 7
+[13-Aug-2019 14:37:31 UTC] PHP Notice:  Undefined offset: -1 in /home/aasante/Development/Web/Fundamentals-of-Web-Development/Chapter 15/chap_project_15/project1/left.inc.php on line 7
+[13-Aug-2019 14:37:31 UTC] PHP Notice:  Undefined offset: 0 in /home/aasante/Development/Web/Fundamentals-of-Web-Development/Chapter 15/chap_project_15/project1/left.inc.php on line 7
+[13-Aug-2019 14:37:31 UTC] PHP Notice:  Undefined offset: 1 in /home/aasante/Development/Web/Fundamentals-of-Web-Development/Chapter 15/chap_project_15/project1/left.inc.php on line 7
+[13-Aug-2019 14:37:31 UTC] PHP Notice:  Undefined offset: 2 in /home/aasante/Development/Web/Fundamentals-of-Web-Development/Chapter 15/chap_project_15/project1/left.inc.php on line 7
+[13-Aug-2019 14:37:31 UTC] PHP Notice:  Undefined offset: 3 in /home/aasante/Development/Web/Fundamentals-of-Web-Development/Chapter 15/chap_project_15/project1/left.inc.php on line 7
+[13-Aug-2019 14:37:31 UTC] PHP Notice:  Undefined offset: 4 in /home/aasante/Development/Web/Fundamentals-of-Web-Development/Chapter 15/chap_project_15/project1/left.inc.php on line 7
+[13-Aug-2019 14:37:31 UTC] PHP Notice:  Undefined offset: 5 in /home/aasante/Development/Web/Fundamentals-of-Web-Development/Chapter 15/chap_project_15/project1/left.inc.php on line 7
+[13-Aug-2019 14:37:31 UTC] PHP Notice:  Undefined index: unknown in /home/aasante/Development/Web/Fundamentals-of-Web-Development/Chapter 15/chap_project_15/project1/chapter15-project1.php on line 61
+[13-Aug-2019 14:37:31 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function doesnotexist() in /home/aasante/Development/Web/Fundamentals-of-Web-Development/Chapter 15/chap_project_15/project1/chapter15-project1.php:82
+Stack trace:
+#0 {main}
+  thrown in /home/aasante/Development/Web/Fundamentals-of-Web-Development/Chapter 15/chap_project_15/project1/chapter15-project1.php on line 82

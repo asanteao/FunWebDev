@@ -1,0 +1,30 @@
+[13-Aug-2019 12:16:43 UTC] PHP Notice:  Undefined variable: someString in /home/aasante/Development/Web/Fundamentals-of-Web-Development/Chapter 15/lab15_start/lab15-exercise01.php on line 8
+[13-Aug-2019 12:16:43 UTC] PHP Warning:  file_get_contents(asdsasdsa.txt): failed to open stream: No such file or directory in /home/aasante/Development/Web/Fundamentals-of-Web-Development/Chapter 15/lab15_start/lab15-exercise01.php on line 10
+[13-Aug-2019 12:16:43 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function nonexistant_function() in /home/aasante/Development/Web/Fundamentals-of-Web-Development/Chapter 15/lab15_start/lab15-exercise01.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/aasante/Development/Web/Fundamentals-of-Web-Development/Chapter 15/lab15_start/lab15-exercise01.php on line 12
+[13-Aug-2019 12:18:07 UTC] PHP Notice:  Undefined variable: someString in /home/aasante/Development/Web/Fundamentals-of-Web-Development/Chapter 15/lab15_start/lab15-exercise01.php on line 8
+[13-Aug-2019 12:18:07 UTC] PHP Warning:  file_get_contents(asdsasdsa.txt): failed to open stream: No such file or directory in /home/aasante/Development/Web/Fundamentals-of-Web-Development/Chapter 15/lab15_start/lab15-exercise01.php on line 10
+[13-Aug-2019 12:18:07 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function nonexistant_function() in /home/aasante/Development/Web/Fundamentals-of-Web-Development/Chapter 15/lab15_start/lab15-exercise01.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/aasante/Development/Web/Fundamentals-of-Web-Development/Chapter 15/lab15_start/lab15-exercise01.php on line 12
+[13-Aug-2019 12:21:17 UTC] PHP Notice:  Undefined variable: someString in /home/aasante/Development/Web/Fundamentals-of-Web-Development/Chapter 15/lab15_start/lab15-exercise01.php on line 9
+[13-Aug-2019 12:21:17 UTC] PHP Warning:  file_get_contents(asdsasdsa.txt): failed to open stream: No such file or directory in /home/aasante/Development/Web/Fundamentals-of-Web-Development/Chapter 15/lab15_start/lab15-exercise01.php on line 11
+[13-Aug-2019 12:21:17 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function nonexistant_function() in /home/aasante/Development/Web/Fundamentals-of-Web-Development/Chapter 15/lab15_start/lab15-exercise01.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/aasante/Development/Web/Fundamentals-of-Web-Development/Chapter 15/lab15_start/lab15-exercise01.php on line 13
+[13-Aug-2019 12:24:56 UTC] PHP Notice:  Undefined variable: someString in /home/aasante/Development/Web/Fundamentals-of-Web-Development/Chapter 15/lab15_start/lab15-exercise01.php on line 10
+[13-Aug-2019 12:24:56 UTC] PHP Warning:  file_get_contents(asdsasdsa.txt): failed to open stream: No such file or directory in /home/aasante/Development/Web/Fundamentals-of-Web-Development/Chapter 15/lab15_start/lab15-exercise01.php on line 12
+[13-Aug-2019 12:24:56 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function nonexistant_function() in /home/aasante/Development/Web/Fundamentals-of-Web-Development/Chapter 15/lab15_start/lab15-exercise01.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/aasante/Development/Web/Fundamentals-of-Web-Development/Chapter 15/lab15_start/lab15-exercise01.php on line 14
+[13-Aug-2019 12:25:17 UTC] PHP Notice:  Undefined variable: someString in /home/aasante/Development/Web/Fundamentals-of-Web-Development/Chapter 15/lab15_start/lab15-exercise01.php on line 9
+[13-Aug-2019 12:25:17 UTC] PHP Warning:  file_get_contents(asdsasdsa.txt): failed to open stream: No such file or directory in /home/aasante/Development/Web/Fundamentals-of-Web-Development/Chapter 15/lab15_start/lab15-exercise01.php on line 11
+[13-Aug-2019 12:25:17 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function nonexistant_function() in /home/aasante/Development/Web/Fundamentals-of-Web-Development/Chapter 15/lab15_start/lab15-exercise01.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/aasante/Development/Web/Fundamentals-of-Web-Development/Chapter 15/lab15_start/lab15-exercise01.php on line 13
