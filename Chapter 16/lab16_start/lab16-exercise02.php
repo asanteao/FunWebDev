@@ -17,11 +17,17 @@
 include_once("Artist.class.php");
 
 // instantiate some sample objects
-$picasso = new Artist("Pablo","Picasso","Malaga","May 11,904", "Apr 8, 1973");
+$picasso = new Artist("Pablo","Picasso","Malaga","May 11, 1904", "Apr 8, 1973");
 $guernica = new Painting("1937",$picasso,"Guernica","Oil on canvas");
 $stein = new Painting("1907",$picasso,"Portrait of Gertrude Stein","Oil on canvas");
 $woman = new Sculpture("1909",$picasso,"Head of a Woman", "bronze",30.5);
+$picasso->addWork($guernica);
+$picasso->addWork($stein);
+$picasso->addWork($woman);
 
+$picassoAsFile = serialize($picasso);
+echo "<pre width='100%'>$picassoAsFile</pre>";
+$picasso = unserialize($picassoAsFile);
 ?>
 <html>
 <body>
@@ -33,6 +39,9 @@ $woman = new Sculpture("1909",$picasso,"Head of a Woman", "bronze",30.5);
 
 <h2>Sculptures</h2>
 <p> <?php echo $woman; ?></p>
+
+<h2>Artist</h2>
+<p> <?php echo $picasso ?> </p>
 
 </body>
 </html>

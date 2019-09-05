@@ -11,7 +11,47 @@
 <body>
 <header>
 </header>
+<script language='javascript' type='text/javascript'>
+if( typeof (localStorage) === 'undefined' || typeof (sessionStorage) === 'undefined') {
+	alert('Web browser doesn\'t support Web Storage');
+} else {
+	//gets serialized to a comma-separated list of strings
+	sessionStorage.setItem("Questions", 
+		new Array("What is your favorite color?", "In what city were you born?", 'Your favorite drink is:')
+	);
+	sessionStorage.setItem("Answers", "");
+	sessionStorage.setItem("currentQuestion", 0);
+}
 
+function nextQ() {
+	var currentIndex = sessionStorage.getItem('currentQuestion');
+	var answerNode = document.getElementById('answer');
+	var answer = answerNode.value;
+	var oldAnswers = sessionStorage.getItem('Answers');
+	if(oldAnswers != "") {
+		sessionStorage.setItem("Answers", oldAnswers+','+answer);
+	} else {
+		sessionStorage.setItem("Answers", answer);
+	}
+	//Now increment to Next Question
+	currentIndex = parseInt(currentIndex) + 1;
+	sessionStorage.setItem("currentQuestion", currentIndex);
+	var allQs = sessionStorage.getItem("Questions").split(',');
+	if(allQs.length <= currentIndex) {
+		//echo for now - survey completed
+		var allAs = sessionStorage.getItem("Answers").split(',');
+		for(var i=0; i<allQs.length; i++) {
+			document.write(allQs[i] + ":" + allAs[i] + "</br>");
+		}
+	} else {
+		//Update the questions from sessionStorage
+		var questionNode = document.getElementById("questionNumber");
+		questionNode.innerHTML = ("Question #" + (parseInt(currentIndex) + 1));
+		var questionNode = document.getElementById("question");
+		questionNode.innerHTML = (allQs[currentIndex]);
+	}
+}
+</script>
 
 <?php
    session_start();
@@ -21,17 +61,11 @@ $questions = array("What is your favorite color?", "In what city were you born?"
 $form= "
 <form action='' method='get' role='form'>
 <div class ='form-group'>
-  <label for='answer$i'>".$questions[$i]."</label>
-  <input type='text' name='answer$i' class='form-control'/>
+  <label for='answer' id='question'>".$questions[$i]."</label>
+  <input type='text' name='answer' id='answer' class='form-control'/>
 </div>";
-if($i==count($questions)-1){
- $form.="<input type='submit' value='Finish and Post' class='form-control' />";
-
-}
-else{
- $form.="<input type='submit' value='Next' class='form-control' />";
-}
-$form.="</form>";
+$form .= "<input type='button' value='Next' class='form-control' onClick='nextQ();'/>";
+$form.='</form>';
 return $form;
 }
 ?>
@@ -41,7 +75,7 @@ return $form;
 <?php
 
 //initialize the sessin to 0 (1st question) or process answer and increment question in session.
-if(!isset($_SESSION['OnQuestion'])){
+/*if(!isset($_SESSION['OnQuestion'])){
    $_SESSION['OnQuestion']=0;
 }
 else{
@@ -65,6 +99,10 @@ if($_SESSION['OnQuestion']<=2){
 else{
  echo "<h1>Results</h1>";
 }
+ */
+
+echo "<h1 id='questionNumber'>Question #1</h1>";
+echo "<h2>".getSurveyQuestion(0)."</h2>";
   
 ?>
       </div>

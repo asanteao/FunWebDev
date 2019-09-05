@@ -14,6 +14,7 @@
 
 
 <?php
+session_start();
 
 function getLoginForm(){
    return "
@@ -30,23 +31,65 @@ function getLoginForm(){
 
 </form>";
 }
+
+function getLogoutForm(){
+   return "
+<form action='/logout.php' method='get' role='form'>
+<div class ='form-group'>
+	<button type='submit'>logout</button>
+</div>
+
+</form>";
+}
+
+function validLogin() {
+	$pdo = new PDO(DBCONNSTRING, DBUSER, DBPASS);
+	// very simple (and insecure) check of valid credentials
+	$sql = "SELECT * FROM Credentials WHERE Username=:user and Password=:pass";
+	$statement = $pdo->prepare($sql);
+	$statement->bindValue(':user', $_POST['username']);
+	$statement->bindValue(':pass', $_POST['pword']);
+	$statement->execute();
+	if($statement->rowCount() > 0) {
+		return true;
+	}
+	return false;
+}
 ?>
  <div class="container theme-showcase" role="main">  
       <div class="jumbotron">
         <h1>
 <?php
    require_once("config.php");
+   $loggedIn = false;
    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-     echo "Login attempted";
-   }
-   else{
+	   if(validLogin()) {
+		   echo "Welcome ". $_POST['username'];
+		   // add 1 to the current time for expiry time
+		   $expiryTime = time() + 60*60*24;
+		   $_SESSION["Username"] = $_POST['username'];
+		   $loggedIn = true;
+	   } else {
+		   echo "Login Unsuccessful";
+	   }
+   } else if(isset($_SESSION['Username'])) {
+	   echo "Welcome ".$_SESSION['Username'];
+	   $loggedIn = true;
+   } else {
      echo "No Post detected";
    } 
 ?>
 
 </h1>
       </div>
-<?php echo getLoginForm(); ?>
+<?php
+   if(!$loggedIn) {
+	echo getLoginForm(); 
+   } else {
+	   echo 'Some content';
+	   echo getLogoutForm();
+   }
+?>
  </div>
 </body>
 </html>

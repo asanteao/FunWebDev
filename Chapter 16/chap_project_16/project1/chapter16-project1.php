@@ -76,6 +76,14 @@
                 <div class="mdl-card__supporting-text">
                     
                     <?php
+			if($_SERVER['REQUEST_METHOD'] == 'POST' || 1) {
+				if(isset($_COOKIE['theme']) && isset($_COOKIE['philosopher'])) {
+					echo "theme: ". $_COOKIE['theme'];
+					echo "<br/>philosopher: ". $_COOKIE['philosopher'];
+				} else {
+					echo 'COOKIES HAVE NOT BEEN SET';
+				}
+			}
                      
                     ?> 
                     

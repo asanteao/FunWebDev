@@ -10,7 +10,7 @@ function is_earlier($current, $newDate){
 	 return false;
 }
 
-class Artist{
+class Artist {
       static private $earliestDate="Sep 15, 2013";
       private $FirstName;
       private $LastName;
@@ -27,6 +27,29 @@ class Artist{
 	     if(is_earlier(self::$earliestDate, $birth))
 	     	     self::$earliestDate=$birth;
       }
+
+      public function serialize() {
+	      return serialize(array("earliest" => self::$earliestDate,
+		      "first" => $this->FirstName,
+		      "last" => $this->LastName,
+		      "bdate" => $this->BirthDate,
+		      "ddate" => $this->DeathDate,
+		      "bcity" => $this->BirthCity,
+		      "works" => $this->artworks
+	      ));
+      }
+
+      public function unserialize($data) {
+	      $data = unserialize($data);
+	      self::$earliestDate = $data['earliest'];
+	      $this->FirstName = $data['first'];
+	      $this->LastName = $data['last'];
+	      $this->BirthDate = $data['bdate'];
+	      $this->DeathDate = $data['ddate'];
+	      $this->BirthCity = $data['bcity'];
+	      $this->artworks = $data['works'];
+      }
+
       public function printNice(){
       	     $table = "<table>";
 	     $table .="<tr><th colspan='2'>".$this->FirstName." ".$this->LastName."</th></tr>";
