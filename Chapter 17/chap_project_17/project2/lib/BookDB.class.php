@@ -39,7 +39,17 @@ class BookDB
         return $statement->fetchAll();
     }      
     
- 
+    public function getAllBySubcategory($subcategoryID) {
+        $sql = self::$baseSQL .  ' WHERE Books.SubcategoryID=? ' . self::$constraint;
+        $statement = DatabaseHelper::runQuery($this->connection , $sql, Array($subcategoryID));
+        return $statement->fetchAll();
+    }
+
+    public function getAllByImprint($imprintID) {
+        $sql = self::$baseSQL .  ' WHERE Books.ImprintID=? ' . self::$constraint;
+        $statement = DatabaseHelper::runQuery($this->connection , $sql, Array($imprintID));
+        return $statement->fetchAll();
+    }	
     
     public function getAll()
     {

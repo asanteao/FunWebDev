@@ -2,6 +2,7 @@
 
 class DatabaseHelper {
  
+	// 3 element array consisting of [0]=>connstr, [1]=>user, [2]=>password
     public static function createConnectionInfo($values=array()) {
           $connString = $values[0];
           $user = $values[1]; 

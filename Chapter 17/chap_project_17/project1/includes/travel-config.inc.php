@@ -6,7 +6,8 @@ ini_set('display_errors','1');
 
 // you may need to change these for your own environment
 define('DBCONNECTION', 'mysql:host=localhost;dbname=travel');
-define('DBUSER', getenv('C9_USER'));
+//define('DBUSER', getenv('C9_USER'));
+define('DBUSER','root'); 
 define('DBPASS', '');
 
 // auto load all classes so we don't have to explicitly include them

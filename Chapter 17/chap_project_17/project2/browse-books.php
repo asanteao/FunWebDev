@@ -6,7 +6,13 @@ include 'includes/book-config.inc.php';
 
 $bookdb = new BookDB($connection);
 
-$books = $bookdb->getAll();
+if(isset($_GET['imprint'])) {
+	$books = $bookdb->getAllByImprint($_GET['imprint']);
+} else if(isset($_GET['subcategory'])) {
+	$books = $bookdb->getAllBySubcategory($_GET['subcategory']);
+} else {
+	$books = $bookdb->getAll();
+}
 
 
 ?>
@@ -82,7 +88,14 @@ $books = $bookdb->getAll();
                     <div class="mdl-card__supporting-text">
                         <ul class="demo-list-item mdl-list">
                             <li class="mdl-list__item"><a href="browse-books.php">All Imprints</a></li>
-                         <?php /* output list of imprints */ ?>   
+			<?php 
+				/* output list of imprints */ 
+				$imprintDB = new ImprintDB($connection);
+				$imprints = $imprintDB->getAll();
+				foreach($imprints as $row) {
+                            		echo '<li class="mdl-list__item"><a href="browse-books.php?imprint='. $row['ImprintID']. '">'. $row['Imprint'] . '</a></li>';
+				}
+			 ?>
                          </ul>
                     </div>    
                     
@@ -92,7 +105,14 @@ $books = $bookdb->getAll();
                     <div class="mdl-card__supporting-text">
                         <ul class="demo-list-item mdl-list">
                             <li class="mdl-list__item"><a href="browse-books.php">All Subcategories</a></li>
-                         <?php /* output list of subcategories */  ?>   
+			<?php 
+				/* output list of subcategories */ 
+				$subcatDB = new SubCategoryDB($connection);
+				$subcats = $subcatDB->getAll();
+				foreach($subcats as $row) {
+                            		echo '<li class="mdl-list__item"><a href="browse-books.php?subcategory='. $row['SubcategoryID']. '">'. $row['SubcategoryName'] . '</a></li>';
+				}
+			 ?>
                          </ul>
                     </div>    
                     

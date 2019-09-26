@@ -7,7 +7,7 @@
     
     private $connect = null;
     
-    private static $baseSQL = "SELECT ImageID,UserID,Title,Description,Latitude,Longitude,CityCode,CountryCodeISO,ContinentCode,Path FROM ImageDetails ";
+    private static $baseSQL = "SELECT ImageID,UID,Title,Description,Latitude,Longitude,CityCode,CountryCodeISO,ContinentCode,Path FROM ImageDetails ";
     private static $constraint = ' ORDER BY ImageID';
     
     public function __construct($connection) {

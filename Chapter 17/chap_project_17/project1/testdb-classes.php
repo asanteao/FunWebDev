@@ -32,11 +32,29 @@ try {
     echo $result['CountryName'] . ' ' . $result['Capital'];
     
     $result = $db->getAllWithImages();
-    echo '<h3>With Images</h3>';    
+    echo '<h3>Continents With Images</h3>';    
     foreach ($result as $row) {     
       echo $row['ISO'] . ' ' . $row['CountryName'] . ', ';      
     }       
     
+    $db = new CityDB($connection );
+    $result = $db->findById('251833');
+    echo '<h3>Sample City (GeoNameID=251833)</h3>';
+    echo $result['AsciiName'] . ', ' . $result['CountryName'];
+    
+    $result = $db->getAllWithImages();
+    echo '<h3>Cities With Images</h3>';    
+    foreach ($result as $row) {     
+      echo $row['AsciiName'] . ', ' . $row['CountryCodeISO'] . ', ';      
+    }       
+
+    $db = new ImageRatingDB($connection);
+    $result = $db->findByID('1');
+    echo '<h3>Sample ImageRating (ImageRatingID = 1)</h3>';
+    echo 'ImageRatingID: '. $result['ImageRatingID'] .', ImageID: '. $result['ImageID'] . ', Rating: ' . $result['Rating'];
+    $result = $db->findAvgRating('2');
+    echo '<h3>Sample AverageImageRating (ImageID = 2)</h3>';
+    echo 'ImageID: '. $result['ImageID'] .', AvgRating: '. $result['AvgRating'];
 
     $db = new ImageDB($connection );
     $result = $db->findById(16);
